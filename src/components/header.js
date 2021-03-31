@@ -1,42 +1,51 @@
 import * as React from "react"
-import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
+import { css } from "@emotion/react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
+import Nav from "./nav"
+import { NavLink } from "./nav"
+
+const Header = () => {
+  const logo = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "icon.png" }) {
+        publicURL
+      }
+    }
+  `)
+
+  return (
+    <header
+      css={css`
+        padding: 1rem;
+      `}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+      <div
+        css={css`
+          max-width: 1200px;
+          margin: 0 auto;
+          text-align: center;
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+          @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+        `}
+      >
+        <NavLink to="/">
+          <img
+            src={logo.file.publicURL}
+            alt="Logo Car Sales"
+            style={{ marginRight: "10px" }}
+          />
+          <span>Car Sales</span>
+        </NavLink>
+        <Nav />
+      </div>
+    </header>
+  )
 }
 
 export default Header
