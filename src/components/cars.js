@@ -89,9 +89,9 @@ const Cars = ({
           <Text>Type</Text>
           <p className="mb-4">{collections.name}</p>
           <Text>Book Now!</Text>
-          <p>{agents.name}</p>
-          <p>{agents.phone}</p>
-          <p>{agents.email}</p>
+          <p>Agent name: {agents.name}</p>
+          <p>Phone: {agents.phone}</p>
+          <p>Email: {agents.email}</p>
         </div>
         <div>
           <Image fluid={image.sharp.fluid} />

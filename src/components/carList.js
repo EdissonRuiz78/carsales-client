@@ -59,7 +59,7 @@ const CarList = ({ cars }) => {
     } else {
       setVehicles(cars)
     }
-  }, [option])
+  }, [option, cars])
 
   return (
     <>

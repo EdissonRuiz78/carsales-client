@@ -72,7 +72,9 @@ const Layout = ({ children }) => {
       <main>{children}</main>
       <footer
         style={{
+          fontSize: "22px",
           marginTop: `2rem`,
+          textAlign: "center",
         }}
       >
         {new Date().getFullYear()} Car Sales &copy;
