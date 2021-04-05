@@ -36,11 +36,11 @@ const Nav = () => {
       <NavLink to="/" activeClassName="active">
         Home
       </NavLink>
-      <NavLink to="/about" activeClassName="active">
-        About
+      <NavLink to="/vehicles" activeClassName="active">
+        Vehicles
       </NavLink>
-      <NavLink to="/cars" activeClassName="active">
-        Cars For Sale
+      <NavLink to="/blog" activeClassName="active">
+        Blog
       </NavLink>
       <NavLink to="/contact" activeClassName="active">
         Contact

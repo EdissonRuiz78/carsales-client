@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <header
       css={css`
-        padding: 1rem;
+        padding: 0.5rem;
       `}
     >
       <div
