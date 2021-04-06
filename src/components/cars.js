@@ -94,7 +94,8 @@ const Cars = ({
           <p>Email: {agents.email}</p>
         </div>
         <div>
-          <Image fluid={image.sharp.fluid} />
+          <Image fluid={image.sharp.fluid} className="mb-4" />
+          <Text>Overview</Text>
           <p className="mt-4">{overview}</p>
         </div>
       </Grid>

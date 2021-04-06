@@ -58,9 +58,11 @@ const Pages = ({
         <div className="my-auto">
           <Image fluid={image.sharp.fluid} />
         </div>
-        <div>{content}</div>
+        <div>
+          <p>{content}</p>
+        </div>
       </Grid>
-      {title === "Vehicles" && <CarList cars={cars} />}
+      {title === "Vehicles" && <CarList cars={cars} current="/vehicles" />}
     </Layout>
   )
 }

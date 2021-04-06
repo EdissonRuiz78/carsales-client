@@ -8,10 +8,13 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { Global, css } from "@emotion/react"
+import Footer from "./footer"
 
 import Header from "./header"
 
 const Layout = ({ children }) => {
+  const title = "Carsales | Best Car Website"
+  const year = new Date().getFullYear()
   return (
     <>
       <Global
@@ -50,7 +53,7 @@ const Layout = ({ children }) => {
         `}
       />
       <Helmet>
-        <title>Carsales | Best Car Website</title>
+        <title>{title}</title>
         <meta
           name="description"
           content="The best web site to buy and sell cars"
@@ -70,15 +73,7 @@ const Layout = ({ children }) => {
       <Header />
 
       <main>{children}</main>
-      <footer
-        style={{
-          fontSize: "22px",
-          marginTop: `2rem`,
-          textAlign: "center",
-        }}
-      >
-        {new Date().getFullYear()} Car Sales &copy;
-      </footer>
+      <Footer title={title} year={year} />
     </>
   )
 }

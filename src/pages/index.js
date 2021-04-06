@@ -39,7 +39,7 @@ const IndexPage = () => {
         </div>
       </ImageBack>
       <main>
-        <CarList cars={cars} />
+        <CarList cars={cars} current="/" />
       </main>
     </Layout>
   )

@@ -48,7 +48,7 @@ export const Price = styled.div`
   text-align: center;
 `
 
-const CarList = ({ cars }) => {
+const CarList = ({ cars, current }) => {
   const { option, Filter } = useFilter()
   const [vehicles, setVehicles] = useState([])
 
@@ -72,7 +72,12 @@ const CarList = ({ cars }) => {
             <h5 className="text-center mt-2">{car.name}</h5>
             <p className="text-center text-muted mt-2 mb-0">Drive away from</p>
             <Price>${car.price}</Price>
-            <Button as={Link} to={urlSlug(car.name)} variant="dark" block>
+            <Button
+              as={Link}
+              to={current === "/" ? urlSlug(car.name) : `/${urlSlug(car.name)}`}
+              variant="dark"
+              block
+            >
               More Details
             </Button>
           </Card>
