@@ -11,26 +11,31 @@ const Footer = ({ title, year }) => {
             url="https://twitter.com"
             style={{ height: 30, width: 30, margin: "5px" }}
             target="_blank"
+            rel="noopener"
           />
           <SocialIcon
             url="https://linkedin.com"
             style={{ height: 30, width: 30, margin: "5px" }}
             target="_blank"
+            rel="noopener"
           />
           <SocialIcon
             url="https://www.facebook.com/"
             style={{ height: 30, width: 30, margin: "5px" }}
             target="_blank"
+            rel="noopener"
           />
           <SocialIcon
             url="https://www.pinterest.ca/"
             style={{ height: 30, width: 30, margin: "5px" }}
             target="_blank"
+            rel="noopener"
           />
           <SocialIcon
             url="https://www.example.com"
             style={{ height: 30, width: 30, margin: "5px" }}
             target="_blank"
+            rel="noopener"
           />
         </Row>
         <Row className="justify-content-md-center mt-4">
