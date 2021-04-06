@@ -23,7 +23,7 @@ const Footer = ({ title, year }) => {
             target="_blank"
           />
           <SocialIcon
-            network="pinterest"
+            url="https://www.pinterest.ca/"
             style={{ height: 30, width: 30, margin: "5px" }}
             target="_blank"
           />
